@@ -1,0 +1,120 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background: hsl(0, 0%, 95%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  font-family: "Lexend Deca", sans-serif;
+  max-width: 1440px;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.text {
+  font-size: 0.9rem;
+  text-align: left;
+}
+.btn a {
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
+section {
+  height: 100vh;
+}
+.container {
+  max-width: 80%;
+  margin-block: 20%;
+  margin-inline: auto;
+}
+
+.card {
+  padding: 2.5rem;
+  color: var(--Transparent-white-paragraphs);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.orange {
+  background-color: var(--Bright-orange);
+  border-radius: 10px 10px 0 0;
+}
+.cyan {
+  background-color: var(--Dark-cyan);
+}
+.dark-cyan {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+.btn {
+  width: fit-content;
+  padding: 12px 30px;
+  border-radius: 20px;
+  border: transparent;
+}
+
+.orange .btn a {
+  color: var(--Bright-orange);
+}
+.cyan .btn a {
+  color: var(--Dark-cyan);
+}
+.dark-cyan .btn a {
+  color: var(--Very-dark-cyan);
+}
+
+@media (min-width: 700px) {
+  .container {
+    display: flex;
+  }
+  .orange {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .dark-cyan {
+    border-radius: 0 10px 10px 0;
+  }
+  .btn {
+    background-color: transparent;
+    border: 1px solid white;
+  }
+  .orange .btn a,
+  .cyan .btn a,
+  .dark-cyan .btn a {
+    color: white;
+  }
+}
